@@ -1,3 +1,7 @@
+## Lý thuyết tuần 12 (vector, struct, Function overloading) 
+- [file code ở đây](https://github.com/duymanhdoan/Guildline_ML/blob/master/C_Basic/week12/lythuyet_w12.cpp) 
+- [thư viện STL đầy đủ](https://drive.google.com/file/d/1iqlQ1TmgGy_CKwZ0_9KPfu_ZHsnrT3Tu/view)
+
 ## homework week 11. 
 
 ### I.Bài tập cơ bản.
