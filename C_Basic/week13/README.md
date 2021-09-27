@@ -13,7 +13,7 @@
 
 <b>Bài 2: </b> Nhập vào 2 ma trận A, B có cùng kích thước m*n. Xuất ra ma trận C là kết quả phép cộng của 2 ma trận A + B.
 
-![](../sourceImage/cau2.png)
+![](https://github.com/duymanhdoan/Guildline_ML/blob/master/C_Basic/week13/sourceImage/cau2.png)
 
 <b> Lưu ý: sử dụng cấu trúc lưu trữ vector (không dùng mảng 2 chiều). </b>  
 
@@ -29,8 +29,9 @@ Yêu cầu:
 => [lời giải](https://github.com/duymanhdoan/Guildline_ML/blob/master/C_Basic/week13/B3.cpp)
 
 Bài 4: 
-![](../sourceImage/cau4a.png)
-![](../sourceImage/cau4b.png)
+![](https://github.com/duymanhdoan/Guildline_ML/blob/master/C_Basic/week13/sourceImage/cau4a.png)
+
+![](https://github.com/duymanhdoan/Guildline_ML/blob/master/C_Basic/week13/sourceImage/cau4b.png)
 
 
 => [lời giải](https://github.com/duymanhdoan/Guildline_ML/blob/master/C_Basic/week13/B4.cpp)
