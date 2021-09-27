@@ -29,9 +29,10 @@ Yêu cầu:
 => [lời giải](https://github.com/duymanhdoan/Guildline_ML/blob/master/C_Basic/week13/B3.cpp)
 
 Bài 4: 
-![](https://github.com/duymanhdoan/Guildline_ML/blob/master/C_Basic/week13/sourceImage/cau4a.png)
 
-![](https://github.com/duymanhdoan/Guildline_ML/blob/master/C_Basic/week13/sourceImage/cau4b.png)
+- ![](https://github.com/duymanhdoan/Guildline_ML/blob/master/C_Basic/week13/sourceImage/cau4a.png)
+
+- ![](https://github.com/duymanhdoan/Guildline_ML/blob/master/C_Basic/week13/sourceImage/cau4b.png)
 
 
 => [lời giải](https://github.com/duymanhdoan/Guildline_ML/blob/master/C_Basic/week13/B4.cpp)
