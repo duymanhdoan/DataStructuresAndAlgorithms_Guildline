@@ -66,6 +66,6 @@ Bài 2: nhập vào một số nguyên là bình phương của một số x, v�
 
 => [lời giải](https://github.com/duymanhdoan/Guildline_ML/blob/master/C_Basic/week12/2B.cpp)
 
-Bài 3: [Đề bài](https://codeforces.com/contest/1557/problem/A)
+Bài 3: [Đề bài: 1557A - codeforces.com](https://codeforces.com/contest/1557/problem/A)
 
 => [lời giải](https://github.com/duymanhdoan/Guildline_ML/blob/master/C_Basic/week12/3B.cpp)

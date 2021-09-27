@@ -13,7 +13,7 @@
 
 <b>Bài 2: </b> Nhập vào 2 ma trận A, B có cùng kích thước m*n. Xuất ra ma trận C là kết quả phép cộng của 2 ma trận A + B.
 
-![](../sourceImage/cau2.png | width = 400)
+![](../sourceImage/cau2.png)
 
 <b> Lưu ý: sử dụng cấu trúc lưu trữ vector (không dùng mảng 2 chiều). </b>  
 
