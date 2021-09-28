@@ -2,7 +2,7 @@
 - [file code ở đây](https://github.com/duymanhdoan/Guildline_ML/blob/master/C_Basic/week13/lythuyet_w13.cpp) 
 - [Đọc thông tin trong thư viện STL đầy đủ ở đây.](https://drive.google.com/file/d/1iqlQ1TmgGy_CKwZ0_9KPfu_ZHsnrT3Tu/view)
 
-## Chữa bài BTVN tuân 12. 
+## Chữa bài BTVN tuần 12. 
 
 ###  <b>I. Bài tập cơ bản </b>
 <b>Bài 1: </b> Nhập vào một vector chứa kiểu nguyên. Thực hiện các thao tác sau: 
