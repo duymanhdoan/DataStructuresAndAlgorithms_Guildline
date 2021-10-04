@@ -1,5 +1,5 @@
 ## Lý thuyết tuần 14 STL(String) 
-- [file code ở đây](https://github.com/duymanhdoan/Guildline_ML/blob/master/C_Basic/week14/ly_thuyet.cpp) 
+- [Lý thuyết String tuần 14](https://github.com/duymanhdoan/Guildline_ML/blob/master/C_Basic/week14/ly_thuyet.cpp) 
 - [Đọc thông tin trong thư viện STL đầy đủ ở đây.](https://drive.google.com/file/d/1iqlQ1TmgGy_CKwZ0_9KPfu_ZHsnrT3Tu/view)
 
 ## Chữa bài BTVN tuần 13. 
