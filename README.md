@@ -55,9 +55,9 @@
 ## List content of Projects. 
 
 ### Python cở bản
-
+- hom a1, a2, a3 
 ### C++ cơ bản 
-
+b1,dsfdsf \\\dsafds
 ### Theo chủ đề 
 
 ### Danh sách bài submit 
