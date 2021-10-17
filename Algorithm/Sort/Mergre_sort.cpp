@@ -1,139 +1,81 @@
 ﻿#include <bits/stdc++.h>
- 
 using namespace std;
  
-typedef long long ll;
-typedef long double ld;
-typedef complex<ld> cd;
- 
-typedef pair<int, int> pi;
-typedef pair<ll,ll> pl;
-typedef pair<ld,ld> pd;
- 
-typedef vector<int> vi;
-typedef vector<ld> vd;
-typedef vector<ll> vl;
-typedef vector<pi> vpi;
-typedef vector<pl> vpl;
-typedef vector<cd> vcd;
- 
-#define FOR(i, a, b) for (int i=a; i<(b); i++)
-#define F0R(i, a) for (int i=0; i<(a); i++)
-#define FORd(i,a,b) for (int i = (b)-1; i >= a; i--)
-#define F0Rd(i,a) for (int i = (a)-1; i >= 0; i--)
-#define trav(a,x) for (auto& a : x)
-#define uid(a, b) uniform_int_distribution<int>(a, b)(rng)
- 
-#define sz(x) (int)(x).size()
-#define mp make_pair
-#define pb push_back
-#define f first
-#define s second
-#define lb lower_bound
-#define ub upper_bound
-#define all(x) x.begin(), x.end()
-#define ins insert
- 
-template<class T> bool ckmin(T& a, const T& b) { return b < a ? a = b, 1 : 0; }
-template<class T> bool ckmax(T& a, const T& b) { return a < b ? a = b, 1 : 0; }
- 
-mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
- 
-const int MOD = 1000000007;
-const char nl = '\n';
-const int MX = 100001; //check the limits, dummy
- 
-void merge(int arr[], int l, int m, int r)
-{
-    int i, j, k;
-    int n1 = m - l + 1;
-    int n2 =  r - m;
- 
-    /* Tạo các mảng tạm */
-    int L[n1], R[n2];
- 
-    /* Copy dữ liệu sang các mảng tạm */
-    for (i = 0; i < n1; i++)
-        L[i] = arr[l + i];
-    for (j = 0; j < n2; j++)
-        R[j] = arr[m + 1+ j];
- 
-    /* Gộp hai mảng tạm vừa rồi vào mảng arr*/
-    i = 0; // Khởi tạo chỉ số bắt đầu của mảng con đầu tiên
-    j = 0; // Khởi tạo chỉ số bắt đầu của mảng con thứ hai
-    k = l; // IKhởi tạo chỉ số bắt đầu của mảng lưu kết quả
-    while (i < n1 && j < n2)
-    {
-        if (L[i] <= R[j])
-        {
-            arr[k] = L[i];
+int a[100000]; 
+
+/* Hàm trộn - merge
+ start - chỉ số bắt đầu mảng
+ mid - chỉ số giữa, chia đôi mảng
+*/ 
+void merge(int a[], int start, int mid, int end){
+    int n1 = mid - start + 1; // Số phần tử mảng con trái 
+                                    // + 1 là do lưu thêm phần tử ở vị trí mid
+    int n2= end-mid;          // Số phần tử mảng con phải
+    int left[n1]; int right[n2];  // Khai báo hai mảng trung gian
+    cout << n1 << " " << n2 << endl; 
+    // Copy giữ liệu từ mảng chính ra hai mảng con
+    for(int x=0; x<n1; x++) left[x] = a[start+x]; 
+    for(int y=0; y<n2; y++) right[y] = a[mid+1+y];
+    
+    int i=0, j=0;     // Khai báo hai biến chạy để duyệt mảng con
+    int k=start;     // Lưu k làm vị trí bắt đầu của mảng chính,
+    while(i<n1 && j<n2){    // Trong khi cả hai mảng con chưa hết phần tử
+        if(left[i]>=right[j]){   // Nếu phần tử mảng con trái >= mảng con phải
+            a[k]=right[j];   // Điển phần tử mảng con phải vào mảng chính
+            j++;             // xét phần tử tiếp theo của mảng right
+        }
+        else{               // Ngược lại tức là left[i] < right[j]
+            a[k]=left[i];
             i++;
         }
-        else
-        {
-            arr[k] = R[j];
-            j++;
-        }
-        k++;
+        k++;              // Tăng index của mảng chính, mỗi lần lặp sẽ tìm được 1 phần tử thích hợp
     }
- 
-    /* Copy các phần tử còn lại của mảng L vào arr nếu có */
-    while (i < n1)
-    {
-        arr[k] = L[i];
-        i++;
+        // Sau vòng lặp trên, 1 trong 2 mảng đã duyệt hết phần tử, hoặc cả hai cùng hết
+    while(j<n2){      // Nếu mảng right chưa hết, mảng left đã hết
+        a[k]=right[j]; // Cho toàn bộ các phần tử còn lại vào mảng chính
         k++;
+        j++;    
     }
- 
-    /* Copy các phần tử còn lại của mảng R vào arr nếu có */
-    while (j < n2)
-    {
-        arr[k] = R[j];
-        j++;
+    while(i<n1){     // Nếu mảng left chưa hết, mảng right hết
+        a[k]= left[i];
         k++;
+        i++;    
     }
 }
- 
-/* l là chỉ số trái và r là chỉ số phải của mảng cần được sắp xếp */
-void mergeSort(int arr[], int l, int r)
-{
-    if (l < r)
-    {
-        // Tương tự (l+r)/2, nhưng cách này tránh tràn số khi l và r lớn
-        int m = l+(r-l)/2;
- 
-        // Gọi hàm đệ quy tiếp tục chia đôi từng nửa mảng
-        mergeSort(arr, l, m);
-        mergeSort(arr, m+1, r);
- 
-        merge(arr, l, m, r);
+
+// MergeSort
+void mergeSort(int a[], int left, int right){
+    int mid;    //  biến để lưu vị trí chia đôi mảng
+    if(left<right){              // Nếu mảng còn ít nhất 1 phần tử
+        mid =(left+right)/2;    // Chia đôi mảng
+        mergeSort(a,left,mid);   // Đệ quy mảng trái
+        mergeSort(a,mid + 1,right);   // Đệ quy mảng phải
+        merge(a,left, mid ,right);   // Trộn hai mảng lại
     }
+    else    // Mảng < 1 phần tử sẽ dừng đệ quy
+        return;
 }
- 
- 
+
 /* Hàm xuất mảng */
-void printArray(int A[], int size)
+void printArray(int arr[], int size)
 {
     int i;
     for (i=0; i < size; i++)
-        printf("%d ", A[i]);
+        printf("%d ", arr[i]);
     printf("\n");
 }
- 
- 
-int main() {
-    
-    int arr[] = {12, 11, 13, 5, 6, 7};
-    int arr_size = sizeof(arr)/sizeof(arr[0]);
- 
-    printf("Given array is \n");
-    printArray(arr, arr_size);
- 
-    mergeSort(arr, 0, arr_size - 1);
- 
-    printf("\nSorted array is \n");
-    printArray(arr, arr_size);
-    return 0;
- 
+
+int main() {   
+	ios_base::sync_with_stdio(0); cin.tie(0);    
+    int n; 
+    freopen("input.txt","r",stdin); 
+    cin >> n; 
+    for(int i=0; i<n; i++) cin >> a[i]; 
+
+    mergeSort(a,0,n-1); 
+    for(int i=0; i<n; i++) 
+    cout << a[i] << " "; 
+
+    cout << "\n\n"; 
 	return 0;
 }
