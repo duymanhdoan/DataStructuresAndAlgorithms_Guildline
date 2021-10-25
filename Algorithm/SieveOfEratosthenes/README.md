@@ -37,7 +37,7 @@ bool isPrime(int n) {
 Độ phức tạp của thuật toán: Độ phức tạp của thuật toán là O($\sqrt{N}$) do ta phải duyệt từ 1 đến $\sqrt{N}$.
 
 
-<br> <h3> 3. Kiểm tra số nguyên tố  n ( $2 <= n <= 10^{18}$ ) </h3>  </br> 
+<br> <h3> 3. Kiểm tra số nguyên tố  n ( 2 <= n <= 10^18 ) </h3>  </br> 
 
 ```C++
 typedef long long LL; 
