@@ -234,9 +234,9 @@ print(coprime(14,28)) #Should be false
 
 Tham khảo: [stack overflow](https://stackoverflow.com/questions/39678984/efficiently-check-if-two-numbers-are-co-primes-relatively-primes/39679114#39679114)
 
-## F. Đếm số nguyên tố (Counting primes in O( $n^{2/3}$ ))
+## F. Đếm số nguyên tố (Counting primes in O(n^{2/3}))
 
-Code đếm số nguyên tố với n = $10^10$
+Code đếm số nguyên tố với n = 10^10
 
 ```C++
 #include <math.h>
