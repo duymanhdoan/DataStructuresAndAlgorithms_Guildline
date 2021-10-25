@@ -1,8 +1,10 @@
 ﻿#include <bits/stdc++.h> 
 using namespace  std; 
+const int maxn = 10e7; 
+int p[maxn]; 
 int minPrime[100000];
 void  sevie(int n){
-    n == 10; 
+
      for(int i = 2; i*i <= n ; ++i)
      {
          if(minPrime[i]==0)
@@ -12,11 +14,12 @@ void  sevie(int n){
                     minPrime[j] = i; 
          }
      }
-     for( int i = 2; i <= n;++i)
-         if(minPrime[i] == 0)
-             minPrime[i] = i; 
-    
-    
+    for( int i = 2; i <= n;++i)
+        if(minPrime[i] == 0)
+            minPrime[i] = i; 
+    for( int i = 2; i <= n;++i)
+        cout << minPrime[i] <<" "; 
+    cout << endl; 
 }
 
 vector <int> factorize_seive(int n)
