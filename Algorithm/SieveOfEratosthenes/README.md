@@ -165,7 +165,7 @@ for (long long x = L; x <= R; ++x) {
 
 ## D. Phân tích thừa số nguyên tố  với sàng số nguyên tố 
 
-Đầu tiên hãy xem xét thuật toán phân tích ra thừa số nguyên tố trong O($\sqrt{N} $).
+Đầu tiên hãy xem xét thuật toán phân tích ra thừa số nguyên tố trong O(${\sqrt{N}}$).
 
 ```C++
 vector<int> factorize(int n) {
