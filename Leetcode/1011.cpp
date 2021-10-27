@@ -48,5 +48,15 @@ public:
 
 int main()
 {
+    Solution a;
+    int size_weight, days; cin >> size_weight >> days; 
+    vector <int> weights; 
+    for(int i = 0; i < size_weight; ++i)
+    {
+        int x; cin >> x; weights.push_back(x); 
+    } 
+    int ans = a.shipWithinDays(weights, days);
+    cout << ans << endl; 
+     
     return 0; 
 }
