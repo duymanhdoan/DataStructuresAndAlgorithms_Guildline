@@ -367,5 +367,4 @@ Tất cả bài nộp từ contest và bài tập ở đây.
 1238 | [A - Prime Subtraction](https://codeforces.com/contest/1238/problem/A) | [C++17]( ) | `math` `number theory` `*1000` | [Oct/22/2021](https://codeforces.com/contest/1238/submission/132659413) | 
 1051 | [B - Relatively Prime Pairs](https://codeforces.com/contest/1051/problem/B) | [C++17]( ) | `math` `number theory` `*1000` | [Oct/22/2021](https://codeforces.com/contest/1051/submission/132660201) | 
 Spoj | [PRIME1 - Prime Generator](https://www.spoj.com/problems/PRIME1/) | [C++17]( ) | `Primes` `number theory` `*1000` | [Oct/16/2021](../Spojvn/PRIME1.cpp) | 
-
-Spoj | [ Số phong phú ](https://oj.vnoi.info/problem/nkabd) | [C++17]( ) | `Primes` `number theory` | [Oct/00/2021](../Spojvn/ __ .cpp) | 
+Spoj | [ Số phong phú ](https://oj.vnoi.info/problem/nkabd) | [C++17]( ) | `Primes` `number theory` | [Oct/00/2021](../Spojvn/sophongphu.cpp) | 
