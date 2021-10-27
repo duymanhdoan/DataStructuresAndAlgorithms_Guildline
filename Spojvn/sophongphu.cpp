@@ -1,40 +1,30 @@
 ﻿#include <bits/stdc++.h> 
 using namespace std; 
 
-#define ll long long 
-#define nl endl 
-const int maxn = 1e5 + 10; 
-int isPrime[maxn]; 
-
-void seive(int maxn) 
+bool calc(int m)
 {
-    for(int i = 2; i*i <= maxn ; ++i)
-     {
-         if(isPrime[i]==0)
-         {
-             for(int j = i*i; j <= maxn; j+=i)
-                if(isPrime[j] == 0) 
-                    isPrime[j] = i; 
-         }
-     }
-    for( int i = 2; i <= maxn;++i)
-        if(isPrime[i] == 0)
-            isPrime[i] = i; 
-    for(int i=2; i<=maxn; ++i) 
-        cout << isPrime[i] <<" "; 
+    if (m==1) return 0; 
+    int sum = 1; 
+    for(int i = 2; i*i <= m; ++i) 
+    {
+        if(m%i==0) 
+        {
+            sum += i;  
+            if(m/i != i) sum += m/i; 
+        }
+    }
+    // cout << sum << " " << m << endl; 
+    return (sum > m);  
 }
 
 int main()
 {
-    // int T; cin >> T; 
-    seive(200); 
-    int L, R, cnt = 0; cin >> L >> R; 
-    for(int i = max(12,L); i<= R; ++i)
+    int L, R, cnt = 0; 
+    scanf("%d%d",&L,&R); 
+    for(int i = L; i <= R; ++i) 
     {
-        int s = 1; 
-        while()
-        if(s > i) cnt++;  
+        if(calc(i)==true) cnt++;  
     }
-    cout << cnt << endl; 
+    printf("%d\n",cnt);  
     return 0; 
 }
